@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, Zap, Home, Shield, Lightbulb } from 'lucide-react';
+import { Map, Zap, Home, Shield, Lightbulb, Ghost, Users, ArrowDown, FileText } from 'lucide-react';
 
 export const UndergroundPage: React.FC = () => {
   return (
@@ -19,14 +19,15 @@ export const UndergroundPage: React.FC = () => {
         </div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl">
-            <span className="inline-block py-1 px-3 border border-amber-800/50 rounded-full text-amber-600 text-xs font-bold tracking-[0.3em] uppercase mb-6 bg-stone-900/50">
-                Lịch sử ngầm
+            <span className="inline-block py-1 px-3 border border-amber-800/50 rounded-full text-amber-600 text-xs font-bold tracking-[0.3em] uppercase mb-6 bg-stone-900/50 backdrop-blur">
+                1940 - 1975
             </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-white tracking-tight">
-                Địa Đạo <span className="text-amber-700">Huyền Thoại</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 text-white tracking-tight leading-tight">
+                Mạch Máu Ngầm <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-amber-400">Huyền Thoại</span>
             </h1>
             <p className="text-xl font-light text-stone-400 max-w-2xl mx-auto leading-relaxed">
-                Nơi sự sống sinh sôi trong bóng tối, nơi ý chí con người cứng hơn đất đá thép gang.
+                "Thành phố trong lòng đất" - 250km địa đạo kiên cường trước bom đạn B-52.
             </p>
         </div>
       </div>
@@ -41,19 +42,27 @@ export const UndergroundPage: React.FC = () => {
                         <Map size={24} />
                     </div>
                     <div>
-                        <h2 className="text-2xl font-serif font-bold text-white">Cấu Trúc</h2>
-                        <p className="text-stone-500 text-sm font-mono">Củ Chi & Vĩnh Mốc</p>
+                        <h2 className="text-2xl font-serif font-bold text-white">Hệ Thống</h2>
+                        <p className="text-stone-500 text-sm font-mono">Củ Chi</p>
                     </div>
                 </div>
                 
                 <div className="space-y-6">
-                    <StatRow label="Tổng chiều dài" value="250+" unit="km" />
+                    <StatRow label="Tổng chiều dài" value="250" unit="km" />
                     <div className="h-px bg-stone-800"></div>
                     <StatRow label="Độ sâu tối đa" value="12" unit="mét" />
                     <div className="h-px bg-stone-800"></div>
-                    <StatRow label="Số tầng địa đạo" value="03" unit="tầng" />
+                    <StatRow label="Số tầng" value="03" unit="tầng" />
                     <div className="h-px bg-stone-800"></div>
-                    <StatRow label="Thời gian đào" value="20+" unit="năm" />
+                    <StatRow label="Hy sinh" value="45k" unit="người" />
+                </div>
+                
+                <div className="mt-8 pt-6 border-t border-stone-800">
+                    <p className="text-xs text-stone-500 mb-3 uppercase tracking-wide font-bold">Chiến dịch chống phá</p>
+                    <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1.5 bg-red-900/20 text-red-400 rounded-lg text-xs font-bold border border-red-900/30 hover:bg-red-900/30 transition-colors cursor-help" title="8,000 quân Mỹ, 30 tấn bom B-52">Crimp (1966)</span>
+                        <span className="px-3 py-1.5 bg-red-900/20 text-red-400 rounded-lg text-xs font-bold border border-red-900/30 hover:bg-red-900/30 transition-colors cursor-help" title="30,000 quân Mỹ">Cedar Falls (1967)</span>
+                    </div>
                 </div>
             </div>
 
@@ -61,48 +70,104 @@ export const UndergroundPage: React.FC = () => {
             <div className="md:col-span-8 space-y-20 pt-10 md:pt-0">
                 <section>
                     <h3 className="text-4xl font-serif font-bold mb-8 text-white flex items-center gap-4">
-                        <span className="text-stone-700 text-6xl opacity-20 -ml-4 absolute -z-10">01</span>
-                        Thành Phố Ngầm
+                        <span className="text-stone-800 text-6xl opacity-40 -ml-4 absolute -z-10 font-sans font-black">01</span>
+                        Cuộc Sống Trong Bóng Tối
                     </h3>
                     <p className="text-lg md:text-xl text-stone-400 leading-relaxed mb-8">
-                        Không chỉ là nơi trú ẩn, địa đạo là một <strong className="text-amber-500 font-normal">hệ thống xã hội thu nhỏ</strong> hoàn chỉnh. 
-                        Dưới lớp đất dày là bệnh xá, trường học, kho vũ khí, nhà bếp Hoàng Cầm không khói, 
-                        và thậm chí cả rạp chiếu phim để phục vụ tinh thần chiến sĩ.
+                        Dưới lớp đất dày là một xã hội thu nhỏ hoàn chỉnh. Bất chấp không khí ngột ngạt, bóng tối tuyệt đối và sự đe dọa từ côn trùng độc hại, 
+                        quân dân Củ Chi vẫn duy trì bệnh xá, lớp học, văn nghệ và cả trụ sở chỉ huy Mặt trận Giải phóng miền Nam.
                     </p>
                     
                     <div className="grid md:grid-cols-2 gap-4">
-                        <FeatureBox icon={<Home size={20} />} title="Đời sống" desc="Sinh hoạt, học tập diễn ra bình thường dưới lòng đất." />
-                        <FeatureBox icon={<Shield size={20} />} title="Phòng thủ" desc="Hệ thống bẫy chông, lỗ châu mai ngụy trang tinh vi." />
-                        <FeatureBox icon={<Zap size={20} />} title="Kết cấu" desc="Chịu được sức công phá của bom hạng nặng và xe tăng." />
-                        <FeatureBox icon={<Lightbulb size={20} />} title="Sáng tạo" desc="Bếp Hoàng Cầm tản khói, giấu vị trí nấu ăn." />
+                        <FeatureBox icon={<Lightbulb size={20} />} title="Bếp Hoàng Cầm" desc="Hệ thống tản khói tinh vi, nấu ăn không lộ vị trí." />
+                        <FeatureBox icon={<Ghost size={20} />} title="Bẫy Chông" desc="Ma trận bẫy tre, bẫy hổ gây ám ảnh cho quân địch." />
+                        <FeatureBox icon={<Users size={20} />} title="Đời Sống" desc="Chung sống với dơi, chuột, rắn rết nhưng vẫn lạc quan." />
+                        <FeatureBox icon={<Shield size={20} />} title="Bất Khả Xâm Phạm" desc="Chịu được bom B-52 'thảm' và xe tăng càn quét." />
                     </div>
                 </section>
 
                 <section>
-                    <h3 className="text-4xl font-serif font-bold mb-8 text-white flex items-center gap-4">
-                        <span className="text-stone-700 text-6xl opacity-20 -ml-4 absolute -z-10">02</span>
-                         Cấu Trúc Tầng
+                    <h3 className="text-4xl font-serif font-bold mb-12 text-white flex items-center gap-4">
+                        <span className="text-stone-800 text-6xl opacity-40 -ml-4 absolute -z-10 font-sans font-black">02</span>
+                         Cấu Trúc 3 Tầng
                     </h3>
                     
-                    {/* Interactive-looking Diagram */}
-                    <div className="relative border-l-2 border-stone-800 pl-8 space-y-12">
-                        <LayerItem 
-                            depth="3-4m" 
-                            title="Tầng 1: Chiến Đấu" 
-                            desc="Nơi bố trí các ổ bắn tỉa, hầm chông và lỗ thông hơi. Chịu được đạn pháo và sức nặng xe tăng." 
-                        />
-                        <LayerItem 
-                            depth="5-8m" 
-                            title="Tầng 2: Sinh Hoạt" 
-                            desc="Nơi nghỉ ngơi, bệnh xá, kho lương thực và nhà bếp. Được thiết kế nắp hầm bí mật để ngăn hơi độc." 
-                        />
-                         <LayerItem 
-                            depth="10m+" 
-                            title="Tầng 3: Trú Ẩn" 
-                            desc="Hầm sâu nhất, an toàn tuyệt đối trước các loại bom tấn. Có đường thoát hiểm bí mật ra sông Sài Gòn." 
-                            isLast
-                        />
+                    {/* Visual Depth Chart */}
+                    <div className="relative rounded-3xl overflow-hidden border border-stone-800">
+                        {/* Level 1 */}
+                        <div className="relative bg-[#5D4037] p-8 h-48 flex items-center border-b border-[#3E2723]/50 transition-all hover:bg-[#6D4C41] group">
+                             <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <span className="text-9xl font-black text-black">1</span>
+                             </div>
+                             <div className="flex gap-6 items-start relative z-10">
+                                 <div className="flex flex-col items-center">
+                                     <span className="text-3xl font-bold text-amber-200/50">3m</span>
+                                     <ArrowDown size={16} className="text-amber-200/50 mt-1" />
+                                 </div>
+                                 <div>
+                                     <h4 className="text-xl font-bold text-white mb-2">Tầng 1: Chiến Đấu & Phòng Thủ</h4>
+                                     <p className="text-stone-300 text-sm max-w-md">Chịu được đạn pháo, sức nặng xe tăng và vũ khí hóa học. Bố trí các ổ bắn tỉa, lỗ châu mai và bẫy chông.</p>
+                                 </div>
+                             </div>
+                        </div>
+
+                        {/* Level 2 */}
+                        <div className="relative bg-[#4E342E] p-8 h-48 flex items-center border-b border-[#3E2723]/50 transition-all hover:bg-[#5D4037] group">
+                             <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <span className="text-9xl font-black text-black">2</span>
+                             </div>
+                             <div className="flex gap-6 items-start relative z-10">
+                                 <div className="flex flex-col items-center">
+                                     <span className="text-3xl font-bold text-amber-200/50">6m</span>
+                                     <ArrowDown size={16} className="text-amber-200/50 mt-1" />
+                                 </div>
+                                 <div>
+                                     <h4 className="text-xl font-bold text-white mb-2">Tầng 2: Sinh Hoạt & Chỉ Huy</h4>
+                                     <p className="text-stone-300 text-sm max-w-md">Nơi đặt Bếp Hoàng Cầm, bệnh viện dã chiến, nơi nghỉ ngơi. Có nắp hầm bí mật ngăn hơi độc từ tầng trên.</p>
+                                 </div>
+                             </div>
+                        </div>
+
+                        {/* Level 3 */}
+                        <div className="relative bg-[#3E2723] p-8 h-48 flex items-center transition-all hover:bg-[#4E342E] group">
+                             <div className="absolute right-8 top-1/2 -translate-y-1/2 opacity-10 group-hover:opacity-20 transition-opacity">
+                                <span className="text-9xl font-black text-black">3</span>
+                             </div>
+                             <div className="flex gap-6 items-start relative z-10">
+                                 <div className="flex flex-col items-center">
+                                     <span className="text-3xl font-bold text-amber-200/50">12m</span>
+                                     <ArrowDown size={16} className="text-amber-200/50 mt-1" />
+                                 </div>
+                                 <div>
+                                     <h4 className="text-xl font-bold text-white mb-2">Tầng 3: Trú Ẩn An Toàn</h4>
+                                     <p className="text-stone-300 text-sm max-w-md">Tầng sâu nhất, nơi trú ẩn cuối cùng trước bom hạng nặng B-52. Có lối thoát hiểm bí mật dẫn ra sông Sài Gòn.</p>
+                                 </div>
+                             </div>
+                        </div>
                     </div>
+                </section>
+
+                <section className="bg-stone-900/50 p-8 rounded-2xl border border-stone-800 hover:border-amber-900/30 transition-colors">
+                     <h3 className="text-2xl font-serif font-bold text-white mb-4 flex items-center gap-3">
+                         <Ghost className="text-amber-600" />
+                         Đối Đầu: "Tunnel Rats" (Lính Chuột Hầm)
+                     </h3>
+                     <p className="text-stone-400 leading-relaxed mb-6">
+                        Quân đội Mỹ đã phải thành lập đội đặc nhiệm "Tunnel Rats" - những người lính nhỏ con, trang bị chỉ đèn pin và súng ngắn để chui vào địa đạo. 
+                        Họ phải đối mặt với nỗi kinh hoàng từ bóng tối, bẫy chông và sự phục kích bất ngờ.
+                     </p>
+                     
+                     <div className="bg-stone-950 p-5 rounded-xl border border-stone-800 flex gap-4 items-start">
+                         <div className="bg-stone-800 p-2 rounded-lg">
+                             <FileText size={20} className="text-stone-400" />
+                         </div>
+                         <div>
+                             <h5 className="text-amber-500 font-bold text-sm uppercase tracking-wide mb-1">Dữ liệu lịch sử</h5>
+                             <p className="text-stone-300 text-sm">
+                                 Ngày <strong>18/1/1967</strong>, "Lính chuột hầm" tìm thấy 500.000 trang tài liệu tại trụ sở Củ Chi, nhưng không thể phá hủy được hệ thống.
+                             </p>
+                         </div>
+                     </div>
                 </section>
             </div>
         </div>
@@ -122,18 +187,9 @@ const StatRow = ({ label, value, unit }: any) => (
 );
 
 const FeatureBox = ({ icon, title, desc }: any) => (
-    <div className="bg-stone-900 p-5 rounded-xl border border-stone-800 hover:border-amber-900/50 transition-colors group">
+    <div className="bg-stone-900 p-5 rounded-xl border border-stone-800 hover:border-amber-900/50 transition-all hover:-translate-y-1 group">
         <div className="text-amber-600 mb-3 group-hover:scale-110 transition-transform origin-left">{icon}</div>
         <h4 className="text-white font-bold mb-1">{title}</h4>
         <p className="text-stone-500 text-sm leading-relaxed">{desc}</p>
-    </div>
-);
-
-const LayerItem = ({ depth, title, desc, isLast }: any) => (
-    <div className="relative group">
-        <div className={`absolute -left-[41px] top-0 w-5 h-5 rounded-full border-4 border-stone-950 ${isLast ? 'bg-amber-600' : 'bg-stone-700 group-hover:bg-amber-600'} transition-colors`}></div>
-        <span className="absolute -left-[120px] top-0 font-mono text-stone-600 text-sm">{depth}</span>
-        <h4 className="text-xl font-bold text-white mb-2 group-hover:text-amber-500 transition-colors">{title}</h4>
-        <p className="text-stone-400 leading-relaxed max-w-xl">{desc}</p>
     </div>
 );

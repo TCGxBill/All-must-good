@@ -1,5 +1,5 @@
 import React from 'react';
-import { Send, ArrowUpRight, TrendingUp, Globe, Cpu, ChevronRight } from 'lucide-react';
+import { Send, ArrowUpRight, TrendingUp, Globe, Cpu, ChevronRight, Train, Plane, Waypoints } from 'lucide-react';
 
 export const FuturePage: React.FC = () => {
   return (
@@ -14,58 +14,60 @@ export const FuturePage: React.FC = () => {
         {/* Hero Header */}
         <div className="container mx-auto max-w-6xl mb-24 text-center">
             <span className="inline-block py-1.5 px-4 border border-blue-200 bg-blue-50/50 backdrop-blur-sm rounded-full text-blue-600 text-xs font-bold tracking-[0.2em] uppercase mb-6 shadow-sm hover:bg-blue-100/50 transition-colors cursor-default">
-                Tầm nhìn 2050
+                Sự Kế Thừa
             </span>
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-slate-900 mb-6 tracking-tight leading-tight">
-                Viết Tiếp <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Bản Hùng Ca Mới</span>
+                Hòa Bình <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-amber-600">Đẹp Lắm</span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto font-light leading-relaxed">
-                Từ những con đường mòn xuyên rừng năm xưa, chúng ta đang kiến tạo những huyết mạch kỹ thuật số và hạ tầng hiện đại vươn tầm thế giới.
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto font-light leading-relaxed">
+                "Từ những con đường tối tăm trong lòng đất, những lối mòn hiểm trở xuyên rừng, và bầu trời lửa đạn, chúng ta đã đi đến hòa bình."
             </p>
         </div>
 
-        {/* Vision Cards Grid */}
+        {/* Legacy Mapping Cards */}
         <div className="container mx-auto max-w-6xl mb-32">
+            <h2 className="text-2xl font-serif font-bold text-slate-800 mb-8 text-center">Từ Di Sản Đến Hiện Đại</h2>
             <div className="grid md:grid-cols-3 gap-8">
                  <VisionCard 
-                    icon={<TrendingUp size={32} />}
-                    title="Huyết Mạch Kinh Tế"
-                    desc="Cao tốc Bắc - Nam nối liền 2000km đất nước, hiện thực hóa ước mơ 'Non sông liền một dải' của cha ông."
+                    icon={<Train size={32} />}
+                    title="Từ Hầm Ngầm... đến Metro"
+                    desc="Tinh thần đào địa đạo Củ Chi năm xưa nay được kế thừa trong việc xây dựng hệ thống Metro hiện đại tại TP.HCM và Hà Nội, giải quyết bài toán giao thông đô thị."
                     color="amber"
-                    image="https://images.unsplash.com/photo-1621955964441-c173e01c135b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    image="https://images.unsplash.com/photo-1494516192674-b86b1f1515c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    tag="Hạ Tầng Ngầm"
                  />
                  <VisionCard 
-                    icon={<Globe size={32} />}
-                    title="Vươn Ra Biển Lớn"
-                    desc="Hệ thống cảng biển nước sâu và sân bay Long Thành đưa Việt Nam trở thành trạm trung chuyển quốc tế."
+                    icon={<Waypoints size={32} />}
+                    title="Từ Đường Mòn... đến Cao Tốc"
+                    desc="Huyết mạch Trường Sơn năm nào nay là Đại lộ Hồ Chí Minh và Cao tốc Bắc - Nam, nối liền các vùng kinh tế trọng điểm, rút ngắn khoảng cách địa lý."
+                    color="green"
+                    image="https://images.unsplash.com/photo-1621955964441-c173e01c135b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    tag="Kết Nối"
+                 />
+                 <VisionCard 
+                    icon={<Plane size={32} />}
+                    title="Từ Bầu Trời Lửa... đến Quốc Tế"
+                    desc="Bầu trời bom đạn năm xưa nay tấp nập những đường bay quốc tế, đưa Việt Nam vươn mình ra thế giới 5 châu, trở thành điểm đến an toàn và thân thiện."
                     color="blue"
                     image="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                 />
-                 <VisionCard 
-                    icon={<Cpu size={32} />}
-                    title="Giao Thông Số"
-                    desc="Ứng dụng AI và Big Data vào quản lý vận hành. Di sản quá khứ được số hóa để trường tồn mãi mãi."
-                    color="purple"
-                    image="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    tag="Hội Nhập"
                  />
             </div>
         </div>
 
         {/* Legacy Form Section */}
-        <div className="container mx-auto max-w-4xl">
-            <div className="relative bg-white/80 backdrop-blur-xl p-8 md:p-14 rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-white">
+        <div className="container mx-auto max-w-5xl">
+            <div className="relative bg-white/60 backdrop-blur-xl p-8 md:p-14 rounded-[3rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] border border-white">
                 <div className="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
                     <Send size={150} />
                 </div>
                 
                 <div className="grid md:grid-cols-12 gap-12">
-                    <div className="md:col-span-5">
-                        <h2 className="text-3xl font-serif font-bold text-slate-800 mb-4">Lưu Giữ Ký Ức</h2>
+                    <div className="md:col-span-5 flex flex-col justify-center">
+                        <h2 className="text-3xl font-serif font-bold text-slate-800 mb-4">Chia Sẻ Ký Ức</h2>
                         <p className="text-slate-600 mb-8 leading-relaxed">
-                            Gia đình bạn có ai từng tham gia mở đường Trường Sơn, đào địa đạo hay chiến đấu bảo vệ bầu trời? 
-                            <br/><br/>
-                            Hãy chia sẻ câu chuyện đó để chúng tôi lưu giữ vào <strong className="text-amber-700">Thư viện Di sản Số</strong>.
+                            Mỗi gia đình Việt Nam đều có một câu chuyện. Ông bà, cha mẹ bạn đã từng tham gia vào những con đường lịch sử này chưa? Hãy giúp chúng tôi lưu giữ những ký ức vô giá đó.
                         </p>
                         <div className="bg-amber-50/80 p-6 rounded-3xl border border-amber-100 shadow-inner">
                             <h4 className="font-bold text-amber-900 mb-2 text-xs uppercase tracking-wide">Số liệu đã thu thập</h4>
@@ -81,23 +83,32 @@ export const FuturePage: React.FC = () => {
                             <div className="space-y-4">
                                 <input 
                                     type="text" 
-                                    className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-100 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10 text-slate-800 placeholder-slate-400 font-medium transition-all shadow-sm outline-none" 
-                                    placeholder="Họ và tên người kể" 
+                                    className="w-full px-6 py-5 rounded-2xl bg-white border border-slate-100 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10 text-slate-800 placeholder-slate-400 font-medium transition-all shadow-sm outline-none" 
+                                    placeholder="Họ tên người kể chuyện" 
                                 />
-                                <input 
-                                    type="email" 
-                                    className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-100 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10 text-slate-800 placeholder-slate-400 font-medium transition-all shadow-sm outline-none" 
-                                    placeholder="Email liên hệ" 
-                                />
+                                <div className="grid grid-cols-2 gap-4">
+                                    <input 
+                                        type="text" 
+                                        className="w-full px-6 py-5 rounded-2xl bg-white border border-slate-100 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10 text-slate-800 placeholder-slate-400 font-medium transition-all shadow-sm outline-none" 
+                                        placeholder="Năm (VD: 1968)" 
+                                    />
+                                    <select className="w-full px-6 py-5 rounded-2xl bg-white border border-slate-100 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10 text-slate-800 font-medium transition-all shadow-sm outline-none">
+                                        <option value="">Chọn mặt trận...</option>
+                                        <option value="dia-dao">Địa Đạo Củ Chi/Vĩnh Mốc</option>
+                                        <option value="truong-son">Đường Trường Sơn</option>
+                                        <option value="ha-noi">Điện Biên Phủ Trên Không</option>
+                                        <option value="khac">Khác</option>
+                                    </select>
+                                </div>
                                 <textarea 
                                     rows={4} 
-                                    className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-100 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10 text-slate-800 placeholder-slate-400 font-medium transition-all shadow-sm outline-none resize-none" 
-                                    placeholder="Chia sẻ ký ức của bạn..."
+                                    className="w-full px-6 py-5 rounded-2xl bg-white border border-slate-100 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10 text-slate-800 placeholder-slate-400 font-medium transition-all shadow-sm outline-none resize-none" 
+                                    placeholder="Chia sẻ câu chuyện hoặc kỷ vật của gia đình bạn..."
                                 ></textarea>
                             </div>
-                            <button className="w-full group relative overflow-hidden bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 px-6 rounded-2xl transition-all shadow-lg hover:shadow-2xl hover:shadow-slate-900/30 flex items-center justify-center gap-3 active:scale-[0.98] btn-shimmer">
+                            <button className="w-full group relative overflow-hidden bg-slate-900 hover:bg-slate-800 text-white font-bold py-5 px-6 rounded-2xl transition-all shadow-lg hover:shadow-2xl hover:shadow-slate-900/30 flex items-center justify-center gap-3 active:scale-[0.98] btn-shimmer">
                                 <span className="relative z-10 flex items-center gap-2">
-                                    Gửi Vào Thư Viện
+                                    Gửi Vào Thư Viện Di Sản
                                     <span className="bg-white/20 p-1.5 rounded-full group-hover:translate-x-1 transition-transform">
                                         <ChevronRight size={16} />
                                     </span>
@@ -113,28 +124,31 @@ export const FuturePage: React.FC = () => {
   );
 };
 
-const VisionCard = ({ icon, title, desc, color, image }: any) => {
+const VisionCard = ({ icon, title, desc, color, image, tag }: any) => {
     const colorClasses = {
         amber: 'text-amber-600 bg-amber-50 group-hover:bg-amber-600 group-hover:text-white',
         blue: 'text-blue-600 bg-blue-50 group-hover:bg-blue-600 group-hover:text-white',
-        purple: 'text-purple-600 bg-purple-50 group-hover:bg-purple-600 group-hover:text-white'
+        green: 'text-emerald-600 bg-emerald-50 group-hover:bg-emerald-600 group-hover:text-white'
     };
     
     // Derived light color for button hover bg
     const buttonHoverClass = {
         amber: 'group-hover:bg-amber-50 group-hover:text-amber-700',
         blue: 'group-hover:bg-blue-50 group-hover:text-blue-700',
-        purple: 'group-hover:bg-purple-50 group-hover:text-purple-700'
+        green: 'group-hover:bg-emerald-50 group-hover:text-emerald-700'
     };
 
     return (
-        <div className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 h-[480px] flex flex-col cursor-default border border-slate-100">
-            <div className="h-52 overflow-hidden relative">
+        <div className="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-lg hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500 hover:-translate-y-2 h-[550px] flex flex-col cursor-default border border-slate-100">
+            <div className="h-64 overflow-hidden relative">
                 <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/90"></div>
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-slate-600 shadow-sm">
+                    {tag}
+                </div>
             </div>
             
-            <div className="p-8 relative flex-grow flex flex-col -mt-12">
+            <div className="p-8 relative flex-grow flex flex-col -mt-16 bg-gradient-to-t from-white via-white to-transparent">
                 <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-lg transition-colors duration-500 ${(colorClasses as any)[color]}`}>
                     {icon}
                 </div>
@@ -146,7 +160,7 @@ const VisionCard = ({ icon, title, desc, color, image }: any) => {
                     {desc}
                 </p>
                 
-                <button className={`w-full py-3 rounded-xl border border-slate-200 text-slate-500 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 ${(buttonHoverClass as any)[color]}`}>
+                <button className={`w-full py-4 rounded-xl border border-slate-200 text-slate-500 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 ${(buttonHoverClass as any)[color]}`}>
                     Xem chi tiết <ArrowUpRight size={16} />
                 </button>
             </div>
